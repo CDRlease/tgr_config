@@ -64,13 +64,14 @@ jobs:
           test "$manifest_component" = "$EXPECTED_COMPONENT"
           test "$manifest_source_repo" = "$expected_source_repo"
           test "$bundle_count" -eq 1
+          test "$(jq '[.bundles[].name] | unique | length' downloaded/manifest.json)" -eq "$bundle_count"
 
           zip_name="$(jq -r '.bundles[0].name' downloaded/manifest.json)"
           bundle_os="$(jq -r '.bundles[0].os' downloaded/manifest.json)"
           bundle_arch="$(jq -r '.bundles[0].arch' downloaded/manifest.json)"
           validation_type="$(jq -r '.bundles[0].validation.type' downloaded/manifest.json)"
 
-          test "$zip_name" = "config-bin-any-any.zip"
+          test "$zip_name" = "config-any-any.zip"
           test "$bundle_os" = "any"
           test "$bundle_arch" = "any"
           test "$validation_type" = "bundle-entry-exists"
