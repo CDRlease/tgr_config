@@ -10,7 +10,7 @@ checksums, and then notifies
 
 Current expected assets per tag:
 
-- `config-bin-any-any.zip`
+- `config-any-any.zip`
 - `manifest.json`
 - `SHA256SUMS.txt`
 
@@ -18,7 +18,7 @@ Current manifest contract for `config` releases:
 
 - `mode` is `release`
 - `component` is `config`
-- the only `bundles[]` entry carries `name=config-bin-any-any.zip`
+- the only `bundles[]` entry carries `name=config-any-any.zip`
 - the only `bundles[]` entry carries `os=any` and `arch=any`
 - the only `bundles[]` entry carries a `bundle-entry-exists` validation with required `bin/` paths
 
