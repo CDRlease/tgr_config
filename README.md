@@ -5,8 +5,7 @@ Public distribution repository for the formal release flow of
 
 This repository does not store source code. It stores mirrored GitHub Release
 assets from the source repository, validates the release manifest plus bundle
-checksums, and then notifies
-`JiepengTan/tg_client`.
+checksums.
 
 Current expected assets per tag:
 
@@ -21,8 +20,3 @@ Current manifest contract for `config` releases:
 - the only `bundles[]` entry carries `name=config-any-any.zip`
 - the only `bundles[]` entry carries `os=any` and `arch=any`
 - the only `bundles[]` entry carries a `bundle-entry-exists` validation with required `bin/` paths
-
-Required secret:
-
-- `CLIENT_DISPATCH_TOKEN`: token used to send `repository_dispatch` events to
-  `JiepengTan/tg_client`
